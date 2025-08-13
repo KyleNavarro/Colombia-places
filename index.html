@@ -45,10 +45,31 @@
                 </a>
             </div>
         </section>
+        
     </main>
     <footer>
         <a href="https://www.linkedin.com/in/kyle-navarro-geek/" target="_blank">Hecho por Kyle Navarro</a>
     </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar">&times;</span>
+            
+            <!-- Vista 1: Lista de lugares -->
+            <div id="vistaLugares">
+                <h2 id="tituloCiudad"></h2>
+                <ul id="listaLugares"></ul>
+            </div>
+
+            <!-- Vista 2: Galería -->
+            <div id="vistaGaleria" style="display:none;">
+                <button id="volverLugares">← Volver</button>
+                <h2 id="tituloLugar"></h2>
+                <div class="galeria" id="contenedorImagenes"></div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="script.js"></script>
