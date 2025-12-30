@@ -1,16 +1,16 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-html, body{
+html,
+body {
   width: 100%;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -24,115 +24,112 @@ body.dark-mode {
 }
 
 body.dark-mode h1,
-body.dark-mode a{
+body.dark-mode a {
   color: white;
 }
 
-
-header{
-    display: flex;
-    justify-content: space-around;
-    height: 100px;
-    width: 1200px;
-    align-items: center;
-    margin: 0 auto;
-      color: #333;
+header {
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  width: 1200px;
+  align-items: center;
+  margin: 0 auto;
+  color: #333;
 }
 
-body.dark-mode #toggle-theme{
-      background-color:white;
-      color: #333;
+body.dark-mode #toggle-theme {
+  background-color: white;
+  color: #333;
 }
 
-#volverLugares{
-    --b: 4px;   
-    --g: 8px;   
-    --c: #4ECDC4;
+#volverLugares {
+  --b: 4px;
+  --g: 8px;
+  --c: #4ecdc4;
 
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    background: #333;
-    color: white;
-    cursor: pointer;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
 
-    /* Efecto inicial */
-    outline: calc(var(--s)/2) solid #0009;
-    outline-offset: -100px; 
-    transition: outline 0.3s, outline-offset 0.3s, box-shadow 0.3s;
+  /* Efecto inicial */
+  outline: calc(var(--s) / 2) solid #0009;
+  outline-offset: -100px;
+  transition: outline 0.3s, outline-offset 0.3s, box-shadow 0.3s;
 }
-#volverLugares:hover{
-    outline: var(--b) solid var(--c);
-    outline-offset: calc(var(--g)/-2);
+#volverLugares:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: calc(var(--g) / -2);
 }
 
 #toggle-theme {
-    --b: 4px;   
-    --g: 8px;   
-    --c: #4ECDC4;
+  --b: 4px;
+  --g: 8px;
+  --c: #4ecdc4;
 
-    padding: 12px 24px;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    background: #333;
-    color: white;
-    cursor: pointer;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
 
-    /* Efecto inicial */
-    outline: calc(var(--s)/2) solid #0009;
-    outline-offset: -100px; 
-    transition: outline 0.3s, outline-offset 0.3s, box-shadow 0.3s;
-  }
-
-  #toggle-theme:hover {
-    outline: var(--b) solid var(--c);
-    outline-offset: calc(var(--g)/-2);
-   
-  }
-
-main{
-    display: flex;
-    justify-content: center;
-    width: 1200px;
-    margin: 0 auto;
-    flex: 1;
+  /* Efecto inicial */
+  outline: calc(var(--s) / 2) solid #0009;
+  outline-offset: -100px;
+  transition: outline 0.3s, outline-offset 0.3s, box-shadow 0.3s;
 }
 
-#cards{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: auto;
+#toggle-theme:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: calc(var(--g) / -2);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+#cards {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: auto;
 }
 
 .card {
-  --s: 300px;  
-  --b: 8px;    
-  --g: 1px;   
-  --c: #4ECDC4; 
+  --s: 300px;
+  --b: 8px;
+  --g: 1px;
+  --c: #4ecdc4;
   height: 300px;
   width: var(--s);
   overflow: hidden;
   position: relative;
 
   /*Efecto de borde inicial*/
-  outline: calc(var(--s)/2) solid #0009;
-  outline-offset: calc(var(--s)/-2);
+  outline: calc(var(--s) / 2) solid #0009;
+  outline-offset: calc(var(--s) / -2);
   cursor: pointer;
   transition: outline 0.3s, outline-offset 0.3s, box-shadow 0.3s;
-
 }
 
 .card .city-name {
-  position: absolute;      
-  top: 50%;                 
-  left: 50%;                
-  transform: translate(-50%, -50%); 
-  background: rgba(0, 0, 0, 0.1);    
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.1);
   padding: 8px 15px;
   border-radius: 5px;
   font-size: 20px;
@@ -141,13 +138,11 @@ main{
   text-align: center;
 }
 
-
 .card:hover {
   outline: var(--b) solid var(--c);
   outline-offset: var(--g);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
-
 
 .card a {
   display: block;
@@ -182,23 +177,23 @@ footer {
   justify-content: center;
 }
 
-footer a{
+footer a {
   font-size: 18px;
   font-weight: bold;
   color: #333;
   text-decoration: none;
 }
 
-
-
 /* modal */
 .modal {
   display: none;
   position: fixed;
   z-index: 1000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .modal-contenido {
@@ -209,7 +204,7 @@ footer a{
   max-width: 700px;
 }
 
-body.dark-mode .modal-contenido{
+body.dark-mode .modal-contenido {
   color: #333;
 }
 
@@ -244,11 +239,10 @@ ul li:hover {
 .galeria img {
   width: 100%;
   height: 200px;
-  object-fit: cover; 
+  object-fit: cover;
   transition: transform 0.3s ease, z-index 0s ease 0.3s;
   position: relative;
 }
-
 
 .galeria img:hover {
   transform: scale(2);
@@ -258,9 +252,9 @@ ul li:hover {
 }
 
 @media (min-width: 1025px) {
-    #cards {
-        min-height: 610px;
-    }
+  #cards {
+    min-height: 610px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -274,15 +268,13 @@ ul li:hover {
     overflow: hidden;
     outline: none;
   }
-  #cards{
+  #cards {
     margin: 20px 45px 0;
     gap: 10px;
   }
-
-  
 }
 
-/* Móviles */
+/* Móviles dfsdfgdsf */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -299,14 +291,11 @@ ul li:hover {
     padding: 6px 10px;
   }
 
-  h2{
-    font-size:40px;
+  h2 {
+    font-size: 40px;
   }
 
-  li{
+  li {
     font-size: 30px;
   }
-
 }
-
-
